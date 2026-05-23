@@ -247,52 +247,52 @@ textarea.form-input{resize:vertical;min-height:120px}
 .reveal-delay-2{transition-delay:.2s}
 .reveal-delay-3{transition-delay:.3s}
 .reveal-delay-4{transition-delay:.4s}
-#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;transition:opacity .4s ease}
+#bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:3;pointer-events:none;transition:opacity .4s ease}
 
 /* === CSS BACKGROUND ANIMATIONS === */
-.bg-anim{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:hidden;opacity:0;transition:opacity .6s ease}
+.bg-anim{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:3;overflow:hidden;opacity:0;transition:opacity .6s ease}
 .bg-anim.active{opacity:1}
 
 /* -- PAW PRINTS (floating down) -- */
-.anim-paws .paw{position:absolute;font-size:18px;color:rgba(var(--accent-rgb),0.1);animation:paw-fall linear infinite}
-.anim-paws .paw:nth-child(1){left:5%;font-size:14px;animation-duration:18s;animation-delay:0s}
-.anim-paws .paw:nth-child(2){left:14%;font-size:22px;animation-duration:22s;animation-delay:-4s}
-.anim-paws .paw:nth-child(3){left:23%;font-size:16px;animation-duration:20s;animation-delay:-8s}
-.anim-paws .paw:nth-child(4){left:32%;font-size:20px;animation-duration:24s;animation-delay:-2s}
-.anim-paws .paw:nth-child(5){left:41%;font-size:12px;animation-duration:26s;animation-delay:-6s}
-.anim-paws .paw:nth-child(6){left:50%;font-size:24px;animation-duration:19s;animation-delay:-10s}
-.anim-paws .paw:nth-child(7){left:59%;font-size:15px;animation-duration:23s;animation-delay:-3s}
-.anim-paws .paw:nth-child(8){left:68%;font-size:18px;animation-duration:21s;animation-delay:-7s}
-.anim-paws .paw:nth-child(9){left:77%;font-size:20px;animation-duration:25s;animation-delay:-1s}
-.anim-paws .paw:nth-child(10){left:86%;font-size:14px;animation-duration:17s;animation-delay:-5s}
-.anim-paws .paw:nth-child(11){left:9%;font-size:16px;animation-duration:28s;animation-delay:-12s}
-.anim-paws .paw:nth-child(12){left:37%;font-size:22px;animation-duration:16s;animation-delay:-9s}
-.anim-paws .paw:nth-child(13){left:55%;font-size:18px;animation-duration:27s;animation-delay:-14s}
-.anim-paws .paw:nth-child(14){left:73%;font-size:14px;animation-duration:19s;animation-delay:-11s}
-.anim-paws .paw:nth-child(15){left:95%;font-size:20px;animation-duration:22s;animation-delay:-16s}
-@keyframes paw-fall{0%{transform:translateY(-60px) rotate(0deg);opacity:0}5%{opacity:1}90%{opacity:1}100%{transform:translateY(calc(100vh + 60px)) rotate(30deg);opacity:0}}
+.anim-paws .paw{position:absolute;font-size:18px;color:rgba(var(--accent-rgb),0.18);animation:paw-fall linear infinite}
+.anim-paws .paw:nth-child(1){left:5%;font-size:16px;animation-duration:28s;animation-delay:0s}
+.anim-paws .paw:nth-child(2){left:14%;font-size:24px;animation-duration:34s;animation-delay:-6s}
+.anim-paws .paw:nth-child(3){left:23%;font-size:18px;animation-duration:30s;animation-delay:-12s}
+.anim-paws .paw:nth-child(4){left:32%;font-size:22px;animation-duration:36s;animation-delay:-3s}
+.anim-paws .paw:nth-child(5){left:41%;font-size:14px;animation-duration:38s;animation-delay:-9s}
+.anim-paws .paw:nth-child(6){left:50%;font-size:26px;animation-duration:32s;animation-delay:-15s}
+.anim-paws .paw:nth-child(7){left:59%;font-size:17px;animation-duration:35s;animation-delay:-5s}
+.anim-paws .paw:nth-child(8){left:68%;font-size:20px;animation-duration:31s;animation-delay:-10s}
+.anim-paws .paw:nth-child(9){left:77%;font-size:22px;animation-duration:37s;animation-delay:-2s}
+.anim-paws .paw:nth-child(10){left:86%;font-size:16px;animation-duration:29s;animation-delay:-8s}
+.anim-paws .paw:nth-child(11){left:9%;font-size:18px;animation-duration:40s;animation-delay:-18s}
+.anim-paws .paw:nth-child(12){left:37%;font-size:24px;animation-duration:26s;animation-delay:-14s}
+.anim-paws .paw:nth-child(13){left:55%;font-size:20px;animation-duration:39s;animation-delay:-20s}
+.anim-paws .paw:nth-child(14){left:73%;font-size:16px;animation-duration:33s;animation-delay:-16s}
+.anim-paws .paw:nth-child(15){left:95%;font-size:22px;animation-duration:35s;animation-delay:-22s}
+@keyframes paw-fall{0%{transform:translateY(-60px) rotate(0deg);opacity:0}3%{opacity:1}92%{opacity:1}100%{transform:translateY(calc(100vh + 60px)) rotate(25deg);opacity:0}}
 
 /* -- HEARTS (rising up) -- */
-.anim-hearts .heart{position:absolute;bottom:-30px;width:18px;height:18px;background:rgba(var(--accent-rgb),0.08);transform:rotate(45deg);animation:heart-rise linear infinite}
-.anim-hearts .heart::before,.anim-hearts .heart::after{content:'';position:absolute;width:18px;height:18px;background:rgba(var(--accent-rgb),0.08);border-radius:50%}
-.anim-hearts .heart::before{top:-9px;left:0}
-.anim-hearts .heart::after{top:0;left:-9px}
-.anim-hearts .heart:nth-child(1){left:8%;width:14px;height:14px;animation-duration:20s;animation-delay:0s}.anim-hearts .heart:nth-child(1)::before,.anim-hearts .heart:nth-child(1)::after{width:14px;height:14px}.anim-hearts .heart:nth-child(1)::before{top:-7px}.anim-hearts .heart:nth-child(1)::after{left:-7px}
-.anim-hearts .heart:nth-child(2){left:18%;width:22px;height:22px;animation-duration:24s;animation-delay:-3s}.anim-hearts .heart:nth-child(2)::before,.anim-hearts .heart:nth-child(2)::after{width:22px;height:22px}.anim-hearts .heart:nth-child(2)::before{top:-11px}.anim-hearts .heart:nth-child(2)::after{left:-11px}
-.anim-hearts .heart:nth-child(3){left:28%;animation-duration:18s;animation-delay:-7s}
-.anim-hearts .heart:nth-child(4){left:38%;width:16px;height:16px;animation-duration:22s;animation-delay:-1s}.anim-hearts .heart:nth-child(4)::before,.anim-hearts .heart:nth-child(4)::after{width:16px;height:16px}.anim-hearts .heart:nth-child(4)::before{top:-8px}.anim-hearts .heart:nth-child(4)::after{left:-8px}
-.anim-hearts .heart:nth-child(5){left:48%;animation-duration:26s;animation-delay:-5s}
-.anim-hearts .heart:nth-child(6){left:58%;width:24px;height:24px;animation-duration:19s;animation-delay:-9s}.anim-hearts .heart:nth-child(6)::before,.anim-hearts .heart:nth-child(6)::after{width:24px;height:24px}.anim-hearts .heart:nth-child(6)::before{top:-12px}.anim-hearts .heart:nth-child(6)::after{left:-12px}
-.anim-hearts .heart:nth-child(7){left:68%;width:15px;height:15px;animation-duration:23s;animation-delay:-4s}.anim-hearts .heart:nth-child(7)::before,.anim-hearts .heart:nth-child(7)::after{width:15px;height:15px}.anim-hearts .heart:nth-child(7)::before{top:-7.5px}.anim-hearts .heart:nth-child(7)::after{left:-7.5px}
-.anim-hearts .heart:nth-child(8){left:78%;animation-duration:21s;animation-delay:-8s}
-.anim-hearts .heart:nth-child(9){left:88%;width:20px;height:20px;animation-duration:25s;animation-delay:-2s}.anim-hearts .heart:nth-child(9)::before,.anim-hearts .heart:nth-child(9)::after{width:20px;height:20px}.anim-hearts .heart:nth-child(9)::before{top:-10px}.anim-hearts .heart:nth-child(9)::after{left:-10px}
-.anim-hearts .heart:nth-child(10){left:95%;width:14px;height:14px;animation-duration:17s;animation-delay:-6s}.anim-hearts .heart:nth-child(10)::before,.anim-hearts .heart:nth-child(10)::after{width:14px;height:14px}.anim-hearts .heart:nth-child(10)::before{top:-7px}.anim-hearts .heart:nth-child(10)::after{left:-7px}
-.anim-hearts .heart:nth-child(11){left:3%;animation-duration:28s;animation-delay:-11s}
-.anim-hearts .heart:nth-child(12){left:33%;width:22px;height:22px;animation-duration:20s;animation-delay:-13s}.anim-hearts .heart:nth-child(12)::before,.anim-hearts .heart:nth-child(12)::after{width:22px;height:22px}.anim-hearts .heart:nth-child(12)::before{top:-11px}.anim-hearts .heart:nth-child(12)::after{left:-11px}
-.anim-hearts .heart:nth-child(13){left:53%;animation-duration:24s;animation-delay:-15s}
-.anim-hearts .heart:nth-child(14){left:73%;width:14px;height:14px;animation-duration:19s;animation-delay:-10s}.anim-hearts .heart:nth-child(14)::before,.anim-hearts .heart:nth-child(14)::after{width:14px;height:14px}.anim-hearts .heart:nth-child(14)::before{top:-7px}.anim-hearts .heart:nth-child(14)::after{left:-7px}
-.anim-hearts .heart:nth-child(15){left:43%;width:20px;height:20px;animation-duration:22s;animation-delay:-17s}.anim-hearts .heart:nth-child(15)::before,.anim-hearts .heart:nth-child(15)::after{width:20px;height:20px}.anim-hearts .heart:nth-child(15)::before{top:-10px}.anim-hearts .heart:nth-child(15)::after{left:-10px}
-@keyframes heart-rise{0%{transform:translateY(0) rotate(45deg) scale(.5);opacity:0}10%{opacity:1}85%{opacity:1}100%{transform:translateY(calc(-100vh - 40px)) rotate(45deg) scale(1.2);opacity:0}}
+.anim-hearts .heart{position:absolute;bottom:-30px;width:18px;height:18px;background:rgba(var(--accent-rgb),0.15);transform:rotate(45deg);animation:heart-rise linear infinite}
+.anim-hearts .heart::before,.anim-hearts .heart::after{content:'';position:absolute;width:inherit;height:inherit;background:inherit;border-radius:50%}
+.anim-hearts .heart::before{top:-50%;left:0}
+.anim-hearts .heart::after{top:0;left:-50%}
+.anim-hearts .heart:nth-child(1){left:8%;width:14px;height:14px;animation-duration:28s;animation-delay:0s}
+.anim-hearts .heart:nth-child(2){left:18%;width:22px;height:22px;animation-duration:34s;animation-delay:-5s}
+.anim-hearts .heart:nth-child(3){left:28%;animation-duration:26s;animation-delay:-10s}
+.anim-hearts .heart:nth-child(4){left:38%;width:16px;height:16px;animation-duration:30s;animation-delay:-2s}
+.anim-hearts .heart:nth-child(5){left:48%;animation-duration:36s;animation-delay:-8s}
+.anim-hearts .heart:nth-child(6){left:58%;width:24px;height:24px;animation-duration:29s;animation-delay:-14s}
+.anim-hearts .heart:nth-child(7){left:68%;width:15px;height:15px;animation-duration:33s;animation-delay:-6s}
+.anim-hearts .heart:nth-child(8){left:78%;animation-duration:31s;animation-delay:-12s}
+.anim-hearts .heart:nth-child(9){left:88%;width:20px;height:20px;animation-duration:35s;animation-delay:-3s}
+.anim-hearts .heart:nth-child(10){left:95%;width:14px;height:14px;animation-duration:27s;animation-delay:-9s}
+.anim-hearts .heart:nth-child(11){left:3%;animation-duration:38s;animation-delay:-16s}
+.anim-hearts .heart:nth-child(12){left:33%;width:22px;height:22px;animation-duration:30s;animation-delay:-19s}
+.anim-hearts .heart:nth-child(13){left:53%;animation-duration:34s;animation-delay:-22s}
+.anim-hearts .heart:nth-child(14){left:73%;width:14px;height:14px;animation-duration:29s;animation-delay:-15s}
+.anim-hearts .heart:nth-child(15){left:43%;width:20px;height:20px;animation-duration:32s;animation-delay:-24s}
+@keyframes heart-rise{0%{transform:translateY(0) rotate(45deg) scale(.6);opacity:0}5%{opacity:1}90%{opacity:1}100%{transform:translateY(calc(-100vh - 40px)) rotate(45deg) scale(1.1);opacity:0}}
 
 /* -- RINGS (wedding rings floating up) -- */
 .anim-rings .ring{position:absolute;bottom:-60px;border:2px solid rgba(var(--accent-rgb),0.08);border-radius:50%;animation:ring-rise linear infinite}
@@ -312,10 +312,10 @@ textarea.form-input{resize:vertical;min-height:120px}
 @keyframes ring-rise{0%{transform:translateY(0) rotate(0deg) scale(.6);opacity:0}8%{opacity:1}88%{opacity:1}100%{transform:translateY(calc(-100vh - 80px)) rotate(45deg) scale(1.1);opacity:0}}
 
 /* -- BONES (dog bones falling) -- */
-.anim-bones .bone{position:absolute;width:30px;height:10px;background:rgba(var(--accent-rgb),0.07);border-radius:5px;animation:bone-fall linear infinite}
-.anim-bones .bone::before,.anim-bones .bone::after{content:'';position:absolute;width:12px;height:12px;background:rgba(var(--accent-rgb),0.07);border-radius:50%}
-.anim-bones .bone::before{top:-4px;left:-3px;box-shadow:0 6px 0 rgba(var(--accent-rgb),0.07)}
-.anim-bones .bone::after{top:-4px;right:-3px;box-shadow:0 6px 0 rgba(var(--accent-rgb),0.07)}
+.anim-bones .bone{position:absolute;width:30px;height:8px;background:rgba(var(--accent-rgb),0.14);border-radius:4px;animation:bone-fall linear infinite}
+.anim-bones .bone::before,.anim-bones .bone::after{content:'';position:absolute;width:14px;height:14px;background:rgba(var(--accent-rgb),0.14);border-radius:50%}
+.anim-bones .bone::before{top:-5px;left:-5px;box-shadow:0 4px 0 rgba(var(--accent-rgb),0.14)}
+.anim-bones .bone::after{top:-5px;right:-5px;box-shadow:0 4px 0 rgba(var(--accent-rgb),0.14)}
 .anim-bones .bone:nth-child(1){left:6%;width:24px;height:8px;animation-duration:20s;animation-delay:0s}
 .anim-bones .bone:nth-child(2){left:16%;width:34px;height:12px;animation-duration:24s;animation-delay:-4s}
 .anim-bones .bone:nth-child(3){left:26%;animation-duration:18s;animation-delay:-8s}
@@ -499,7 +499,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 <section class="stats-bar">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat-item reveal"><div class="stat-number" data-count="200" data-voice-key="stat1-num">200+</div><div class="stat-label" data-voice-key="stat1-label">Pets Cared For</div></div>
+      <div class="stat-item reveal"><div class="stat-number" data-count="100" data-voice-key="stat1-num">100+</div><div class="stat-label" data-voice-key="stat1-label">Happy Couples</div></div>
       <div class="stat-item reveal reveal-delay-1"><div class="stat-number" data-count="50" data-voice-key="stat2-num">50+</div><div class="stat-label" data-voice-key="stat2-label">Weddings Served</div></div>
       <div class="stat-item reveal reveal-delay-2"><div class="stat-number" data-count="12" data-voice-key="stat3-num">12+</div><div class="stat-label" data-voice-key="stat3-label">Years Experience</div></div>
       <div class="stat-item reveal reveal-delay-3"><div class="stat-number" data-count="100" data-voice-key="stat4-num">100%</div><div class="stat-label" data-voice-key="stat4-label">Satisfaction Rate</div></div>
@@ -704,16 +704,15 @@ textarea.form-input{resize:vertical;min-height:120px}
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-about">
-      <h4>Hart 2 Paw</h4>
-      <p data-voice-key="footer-about">From our hart to your paws&mdash;loving, reliable pet care and wedding pet services in Los Angeles. CPR/First Aid and Fear Free certified. Fully insured.</p>
+      <h4>Hart 2 Paw Weddings</h4>
+      <p data-voice-key="footer-about">Premium wedding pet coordination in Los Angeles. Your furry best friend deserves to be part of your big day. CPR/First Aid and Fear Free certified. Fully insured.</p>
     </div>
     <div>
-      <h4>Services</h4>
-      <a href="#services">Pet Sitting</a>
-      <a href="#services">Dog Walking</a>
-      <a href="#services">Drop-In Visits</a>
-      <a href="#services">Daycare</a>
-      <a href="#packages">Wedding Packages</a>
+      <h4>Packages</h4>
+      <a href="#packages">The Pawfect Day</a>
+      <a href="#packages">VIP: Very Important Pup</a>
+      <a href="#packages">The &ldquo;Furever&rdquo; Plus One</a>
+      <a href="https://kirkautomations.github.io/hart2paw-redesign/">Everyday Pet Care &rarr;</a>
     </div>
     <div>
       <h4>Quick Links</h4>
@@ -832,7 +831,7 @@ $$('.theme-dot').forEach(d=>{d.addEventListener('click',()=>applyTheme(d.dataset
 
 /* === TYPING EFFECT === */
 const typedEl=$('#typed-text');
-let typedPhrases=['Loving care for your fur babies','Wedding day pet coordination','Trusted, certified, insured','Los Angeles pet sitter you can count on','Your pet deserves the best'];
+let typedPhrases=['Your pet belongs at your wedding','Seamless wedding pet coordination','Certified, insured, stress-free','Let your fur baby share your big day','Premium wedding pet services in LA'];
 let phraseIdx=0,charIdx=0,isDeleting=false;
 function typeLoop(){if(!typedEl)return;const phrase=typedPhrases[phraseIdx];if(!isDeleting){typedEl.textContent=phrase.substring(0,charIdx+1);charIdx++;if(charIdx>=phrase.length){setTimeout(()=>{isDeleting=true;typeLoop()},2200);return}setTimeout(typeLoop,45)}else{typedEl.textContent=phrase.substring(0,charIdx-1);charIdx--;if(charIdx<=0){isDeleting=false;phraseIdx=(phraseIdx+1)%typedPhrases.length;setTimeout(typeLoop,400);return}setTimeout(typeLoop,25)}}
 setTimeout(typeLoop,1800);
@@ -1013,7 +1012,7 @@ luxe:{
 }
 };
 
-let currentVoice=ls.get('voice','bestie');
+let currentVoice=ls.get('voice','planner');
 function applyVoice(v){
   currentVoice=v;ls.set('voice',v);
   $$('.voice-dot').forEach(d=>d.classList.toggle('active',d.dataset.voice===v));
