@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" data-theme="blush">
+<html lang="en" data-theme="ivory">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -34,7 +34,15 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .skip-link{position:absolute;top:-100%;left:16px;background:var(--accent);color:#fff;padding:8px 16px;z-index:10000;border-radius:0 0 8px 8px;font-weight:600;transition:top .3s}
 .skip-link:focus{top:0}
 
-/* === THEME: BLUSH (default — warm pink/rose) === */
+/* === THEME: IVORY (default — classic wedding ivory & gold) === */
+[data-theme="ivory"]{
+  --bg:#FFFDF8;--bg-alt:#FBF6EE;--text:#3A3028;--text-muted:#8A7E6E;
+  --accent:#C4995C;--accent-glow:#D4AC6E;--card-bg:rgba(255,253,248,0.92);
+  --card-border:rgba(196,153,92,0.15);--nav-bg:rgba(255,253,248,0.94);
+  --hero-overlay:rgba(58,48,40,0.45);--particle-color:196,153,92;
+  --section-divider:rgba(196,153,92,0.1);--accent-rgb:196,153,92;
+}
+/* === THEME: BLUSH (warm pink/rose) === */
 [data-theme="blush"]{
   --bg:#FFF5F8;--bg-alt:#FFE8EF;--text:#3A2434;--text-muted:#8E6B7F;
   --accent:#E8668A;--accent-glow:#F0899E;--card-bg:rgba(255,255,255,0.88);
@@ -208,6 +216,7 @@ textarea.form-input{resize:vertical;min-height:120px}
 .theme-dot{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .3s;position:relative}
 .theme-dot:hover{transform:scale(1.2)}
 .theme-dot.active{border-color:#fff;box-shadow:0 0 12px rgba(var(--particle-color),0.5)}
+.theme-dot[data-theme="ivory"]{background:linear-gradient(135deg,#FFFDF8,#C4995C)}
 .theme-dot[data-theme="blush"]{background:linear-gradient(135deg,#FFE8EF,#E8668A)}
 .theme-dot[data-theme="moonlight"]{background:linear-gradient(135deg,#1A1225,#D4A574)}
 .theme-dot[data-theme="garden"]{background:linear-gradient(135deg,#E8F0E0,#7BA668)}
@@ -738,7 +747,8 @@ textarea.form-input{resize:vertical;min-height:120px}
 <!-- Theme Switcher -->
 <div class="theme-switcher" role="radiogroup" aria-label="Color theme">
   <span class="label">Theme</span>
-  <button class="theme-dot active" data-theme="blush" role="radio" aria-checked="true" title="Blush" tabindex="0"></button>
+  <button class="theme-dot active" data-theme="ivory" role="radio" aria-checked="true" title="Ivory & Gold" tabindex="0"></button>
+  <button class="theme-dot" data-theme="blush" role="radio" aria-checked="false" title="Blush" tabindex="0"></button>
   <button class="theme-dot" data-theme="moonlight" role="radio" aria-checked="false" title="Moonlight" tabindex="0"></button>
   <button class="theme-dot" data-theme="garden" role="radio" aria-checked="false" title="Garden" tabindex="0"></button>
   <button class="theme-dot" data-theme="ocean" role="radio" aria-checked="false" title="Ocean" tabindex="0"></button>
@@ -771,8 +781,8 @@ textarea.form-input{resize:vertical;min-height:120px}
 'use strict';
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
-const LS_PREFIX='hart2paw';
-const DEFAULT_THEME='blush';
+const LS_PREFIX='h2p-wed';
+const DEFAULT_THEME='ivory';
 const ls={get:(k,d)=>{try{return localStorage.getItem(LS_PREFIX+'-'+k)||d}catch(e){return d}},set:(k,v)=>{try{localStorage.setItem(LS_PREFIX+'-'+k,v)}catch(e){}}};
 
 const yearEl=$('#year');if(yearEl)yearEl.textContent=new Date().getFullYear();
